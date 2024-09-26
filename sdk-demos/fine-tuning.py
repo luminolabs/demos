@@ -10,7 +10,7 @@ async def main():
         job = await client.fine_tuning.create_fine_tuning_job(FineTuningJobCreate(
             base_model_name="llm_llama3_1_8b",
             dataset_name="sample",
-            name="neural_tuning_saga",
+            name="aurora-borealis-finetune",
             parameters=FineTuningJobParameters(
                 batch_size=2,
                 shuffle=True,
