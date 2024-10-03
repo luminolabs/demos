@@ -16,6 +16,6 @@ for example in dataset:
         ]
     })
 
-with open("formatted-trivia.jsonl", "w", encoding="utf-8") as f:
+with open("formatted-encyclopedia.jsonl", "w", encoding="utf-8") as f:
     for item in formatted_data:
         f.write(json.dumps(item) + "\n")
