@@ -1,0 +1,14 @@
+[
+  {
+    "instruction": "What is the capital of France?",
+    "output": "The capital of France is Paris."
+  },
+  {
+    "instruction": "Who wrote the novel '1984'?",
+    "output": "The novel '1984' was written by George Orwell."
+  },
+  {
+    "instruction": "What is the speed of light?",
+    "output": "The speed of light is approximately 299,792 kilometers per second."
+  }
+]

@@ -9,14 +9,15 @@ async def main():
     async with LuminoSDK(os.environ.get("LUMINO_API_KEY")) as client:
         job = await client.fine_tuning.create_fine_tuning_job(FineTuningJobCreate(
             base_model_name="llm_llama3_1_8b",
-            dataset_name="sample",
-            name="aurora-borealis-finetune",
+            dataset_name="encyclopedia-dataset",
+            name="encyclopedia-finetune",
+            type="LORA",
             parameters=FineTuningJobParameters(
                 batch_size=2,
                 shuffle=True,
                 num_epochs=1,
-                use_lora=True,
-                use_qlora=False
+                lr=0.1,
+                seed=42
             )
         ))
 
