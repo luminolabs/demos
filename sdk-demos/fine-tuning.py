@@ -10,7 +10,7 @@ async def main():
         job = await client.fine_tuning.create_fine_tuning_job(FineTuningJobCreate(
             base_model_name="llm_llama3_1_8b",
             dataset_name="encyclopedia-dataset",
-            name="encyclopedia-finetune",
+            name="encyclopedia-demo-decen",
             type="LORA",
             parameters=FineTuningJobParameters(
                 batch_size=2,
@@ -18,7 +18,8 @@ async def main():
                 num_epochs=1,
                 lr=0.1,
                 seed=42
-            )
+            ),
+            provider="LUM"
         ))
 
         print(job)
